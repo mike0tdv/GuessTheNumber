@@ -35,14 +35,15 @@ random_num = random.randint(num1, num2)
 
 # Loop in which the user tries to guess the number
 while failed:
+    print()
     guess = int(input("Enter your guess: "))
+    print()
     guessing(guess)
 
     # Tell the user where is the random number compared to the one they have guessed
     if below:
         print("The correct number is above the number you have guessed!")
     else: print("The correct number is below the number you have guessed!")
-
     # Print out the used numbers
     print("The numbers you have used: ")
     for num in used_numbers:
@@ -50,4 +51,6 @@ while failed:
     print()
 
     # Prints out when the game ends
-else: print(f"Congrats! You guessed the number - {random_num} with {tries} tries!")
+else:
+    print()
+    print(f"Congrats! You guessed the number - {random_num} with {tries} tries!")
